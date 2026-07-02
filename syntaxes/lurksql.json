@@ -1,0 +1,51 @@
+{
+  "scopeName": "source.lurksql",
+  "injectionSelector": "L:source.haskell -comment -(string -meta.embedded)",
+  "patterns": [
+    {
+      "begin": "\\[lurkSQL\\|",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.operator.quasi-quotation.begin.lurksql"
+        }
+      },
+      "end": "\\|\\]",
+      "endCaptures": {
+        "0": {
+          "name": "keyword.operator.quasi-quotation.end.lurksql"
+        }
+      },
+      "contentName": "meta.embedded.block.lurksql",
+      "patterns": [
+        {
+          "include": "source.sql"
+        },
+        {
+          "include": "#lurkSQLInterpolation"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "lurkSQLInterpolation": {
+      "contentName": "meta.embedded.block.haskell",
+      "begin": "\\{\\{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.section.embedded.begin.haskell"
+        }
+      },
+      "end": "\\}\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.embedded.end.haskell"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.haskell"
+        }
+      ]
+    }
+  }
+}

@@ -50,6 +50,28 @@
           "meta.embedded.block.haskell.3": "haskell",
           "source.haskell": "haskell"
         }
+      },
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "source.lurksql",
+        "path": "./syntaxes/lurksql.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.lurksql": "sql",
+          "meta.embedded.block.haskell": "haskell"
+        }
+      },
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "inline.lurksql.injection",
+        "path": "./syntaxes/lurksql-injection.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.haskell": "haskell",
+          "source.haskell": "haskell"
+        }
       }
     ],
     "snippets": [

@@ -1,0 +1,22 @@
+{
+  "scopeName": "inline.lurksql.injection",
+  "injectionSelector": "L:meta.embedded.block.haskell",
+  "patterns": [
+    {
+      "include": "#lurkImplicitParam"
+    }
+  ],
+  "repository": {
+    "lurkImplicitParam": {
+      "match": "(\\?)([a-zA-Z_][a-zA-Z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.variable.haskell"
+        },
+        "2": {
+          "name": "variable.language.implicit.haskell"
+        }
+      }
+    }
+  }
+}
