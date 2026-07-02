@@ -1,7 +1,7 @@
 {
   "scopeName": "inline.lurk.injection",
   "fileTypes": [],
-  "injectionSelector": "L:meta.embedded.block.haskell.1 -:source.js -:source.css, L:meta.embedded.block.haskell.2 -:source.js -:source.css, L:meta.embedded.block.haskell.3 -:source.js -:source.css, L:(meta.embedded.block.lurk.1 | meta.embedded.block.lurk.2 | meta.embedded.block.lurk.3) (string.quoted.double.html | string.quoted.single.html)",
+  "injectionSelector": "L:meta.embedded.block.haskell.1 -:source.js -:source.css, L:meta.embedded.block.haskell.2 -:source.js -:source.css, L:meta.embedded.block.haskell.3 -:source.js -:source.css, L:(meta.embedded.block.lurk.1 | meta.embedded.block.lurk.2 | meta.embedded.block.lurk.3) (string.quoted.double.html | string.quoted.single.html), L:(meta.embedded.block.lurk.1 | meta.embedded.block.lurk.2 | meta.embedded.block.lurk.3) source.js, L:(meta.embedded.block.lurk.1 | meta.embedded.block.lurk.2 | meta.embedded.block.lurk.3) source.css",
   "patterns": [
     {
       "include": "#lurkImplicitParam"
