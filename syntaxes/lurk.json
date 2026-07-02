@@ -1,0 +1,162 @@
+{
+  "scopeName": "source.lurk",
+  "fileTypes": [],
+  "injectionSelector": "L:source.haskell -comment -(string -meta.embedded)",
+  "patterns": [
+    {
+      "include": "#lurkQQLevel1"
+    }
+  ],
+  "repository": {
+    "lurkQQLevel1": {
+      "patterns": [
+        {
+          "begin": "\\[lurk\\|",
+          "beginCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.begin.lurk" }
+          },
+          "end": "\\|\\]",
+          "endCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.end.lurk" }
+          },
+          "contentName": "meta.embedded.block.lurk.1",
+          "patterns": [
+            { "include": "text.html.derivative" },
+            { "include": "#lurkInterpolationLevel1" }
+          ]
+        },
+        {
+          "begin": "\\(lurk\\|",
+          "beginCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.begin.lurk" }
+          },
+          "end": "\\|\\)",
+          "endCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.end.lurk" }
+          },
+          "contentName": "meta.embedded.block.lurk.1",
+          "patterns": [
+            { "include": "text.html.derivative" },
+            { "include": "#lurkInterpolationLevel1" }
+          ]
+        }
+      ]
+    },
+    "lurkInterpolationLevel1": {
+      "contentName": "meta.embedded.block.haskell.1",
+      "begin": "\\{\\{",
+      "beginCaptures": {
+        "0": { "name": "punctuation.section.embedded.begin.haskell" }
+      },
+      "end": "\\}\\}",
+      "endCaptures": {
+        "0": { "name": "punctuation.section.embedded.end.haskell" }
+      },
+      "patterns": [
+        { "include": "#lurkInterpolationLevel1" },
+        { "include": "#lurkQQLevel2" },
+        { "include": "source.haskell" }
+      ]
+    },
+    "lurkQQLevel2": {
+      "patterns": [
+        {
+          "begin": "\\[lurk\\|",
+          "beginCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.begin.lurk" }
+          },
+          "end": "\\|\\]",
+          "endCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.end.lurk" }
+          },
+          "contentName": "meta.embedded.block.lurk.2",
+          "patterns": [
+            { "include": "text.html.derivative" },
+            { "include": "#lurkInterpolationLevel2" }
+          ]
+        },
+        {
+          "begin": "\\(lurk\\|",
+          "beginCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.begin.lurk" }
+          },
+          "end": "\\|\\)",
+          "endCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.end.lurk" }
+          },
+          "contentName": "meta.embedded.block.lurk.2",
+          "patterns": [
+            { "include": "text.html.derivative" },
+            { "include": "#lurkInterpolationLevel2" }
+          ]
+        }
+      ]
+    },
+    "lurkInterpolationLevel2": {
+      "contentName": "meta.embedded.block.haskell.2",
+      "begin": "\\{\\{",
+      "beginCaptures": {
+        "0": { "name": "punctuation.section.embedded.begin.haskell" }
+      },
+      "end": "\\}\\}",
+      "endCaptures": {
+        "0": { "name": "punctuation.section.embedded.end.haskell" }
+      },
+      "patterns": [
+        { "include": "#lurkInterpolationLevel2" },
+        { "include": "#lurkQQLevel3" },
+        { "include": "source.haskell" }
+      ]
+    },
+    "lurkQQLevel3": {
+      "patterns": [
+        {
+          "begin": "\\[lurk\\|",
+          "beginCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.begin.lurk" }
+          },
+          "end": "\\|\\]",
+          "endCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.end.lurk" }
+          },
+          "contentName": "meta.embedded.block.lurk.3",
+          "patterns": [
+            { "include": "text.html.derivative" },
+            { "include": "#lurkInterpolationLevel3" }
+          ]
+        },
+        {
+          "begin": "\\(lurk\\|",
+          "beginCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.begin.lurk" }
+          },
+          "end": "\\|\\)",
+          "endCaptures": {
+            "0": { "name": "keyword.operator.quasi-quotation.end.lurk" }
+          },
+          "contentName": "meta.embedded.block.lurk.3",
+          "patterns": [
+            { "include": "text.html.derivative" },
+            { "include": "#lurkInterpolationLevel3" }
+          ]
+        }
+      ]
+    },
+    "lurkInterpolationLevel3": {
+      "contentName": "meta.embedded.block.haskell.3",
+      "begin": "\\{\\{",
+      "beginCaptures": {
+        "0": { "name": "punctuation.section.embedded.begin.haskell" }
+      },
+      "end": "\\}\\}",
+      "endCaptures": {
+        "0": { "name": "punctuation.section.embedded.end.haskell" }
+      },
+      "patterns": [
+        { "include": "#lurkInterpolationLevel3" },
+        { "include": "#lurkQQLevel3" },
+        { "include": "source.haskell" }
+      ]
+    }
+  }
+}

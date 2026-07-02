@@ -1,0 +1,67 @@
+{
+  "name": "vscode-lurk",
+  "displayName": "Lurk",
+  "version": "0.1.0",
+  "description": "Syntax Highlighting For Haskell Lurk QuasiQuotes",
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "lurk",
+    "haskell",
+    "quasi-quotation",
+    "html",
+    "templates"
+  ],
+  "license": "MIT",
+  "publisher": "ruzaani",
+  "engines": {
+    "vscode": "^1.66.0"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "source.lurk",
+        "path": "./syntaxes/lurk.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.lurk.1": "html",
+          "meta.embedded.block.lurk.2": "html",
+          "meta.embedded.block.lurk.3": "html",
+          "meta.embedded.block.haskell.1": "haskell",
+          "meta.embedded.block.haskell.2": "haskell",
+          "meta.embedded.block.haskell.3": "haskell",
+          "text.html": "html",
+          "source.css": "css",
+          "source.js": "javascript"
+        }
+      },
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "inline.lurk.injection",
+        "path": "./syntaxes/lurk-injection.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.haskell.1": "haskell",
+          "meta.embedded.block.haskell.2": "haskell",
+          "meta.embedded.block.haskell.3": "haskell",
+          "source.haskell": "haskell"
+        }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "haskell",
+        "path": "./snippets/lurk.json"
+      }
+    ]
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#ffffff",
+    "theme": "light"
+  }
+}

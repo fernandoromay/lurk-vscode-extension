@@ -1,0 +1,47 @@
+{
+  "Lurk Block": {
+    "prefix": "lurk",
+    "body": [
+      "[lurk|",
+      "  $0",
+      "|]"
+    ],
+    "description": "Bracket-style Lurk quasiquotation block"
+  },
+  "Lurk Inline Block": {
+    "prefix": "lurki",
+    "body": [
+      "(lurk|",
+      "  $0",
+      "|)"
+    ],
+    "description": "Paren-style Lurk quasiquotation block"
+  },
+  "Lurk forEach": {
+    "prefix": "fe",
+    "body": [
+      "{{forEach $1 (\\\\item -> (lurk|",
+      "  $0",
+      "|))}}"
+    ],
+    "description": "forEach loop with Lurk block"
+  },
+  "Lurk forEachWithIndex": {
+    "prefix": "fei",
+    "body": [
+      "{{forEachWithIndex $1 (\\\\i item -> (lurk|",
+      "  $0",
+      "|))}}"
+    ],
+    "description": "forEachWithIndex loop with Lurk block"
+  },
+  "Lurk foldMap": {
+    "prefix": "fmap",
+    "body": [
+      "{{foldMap (\\\\item -> (lurk|",
+      "  $0",
+      "|)) $1}}"
+    ],
+    "description": "foldMap with Lurk block"
+  }
+}
