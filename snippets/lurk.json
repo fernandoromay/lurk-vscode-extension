@@ -20,7 +20,7 @@
   "Lurk forEach": {
     "prefix": "fe",
     "body": [
-      "{{forEach $1 (\\\\item -> (lurk|",
+      "{{forEach $1 (\\item -> (lurk|",
       "  $0",
       "|))}}"
     ],
@@ -29,7 +29,7 @@
   "Lurk forEachWithIndex": {
     "prefix": "fei",
     "body": [
-      "{{forEachWithIndex $1 (\\\\i item -> (lurk|",
+      "{{forEachWithIndex $1 (\\i item -> (lurk|",
       "  $0",
       "|))}}"
     ],
@@ -38,7 +38,7 @@
   "Lurk foldMap": {
     "prefix": "fmap",
     "body": [
-      "{{foldMap (\\\\item -> (lurk|",
+      "{{foldMap (\\item -> (lurk|",
       "  $0",
       "|)) $1}}"
     ],
