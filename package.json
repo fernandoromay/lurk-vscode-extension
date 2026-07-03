@@ -1,6 +1,6 @@
 {
   "name": "vscode-lurk",
-  "displayName": "Lurk",
+  "displayName": "Lurk QQ",
   "version": "0.1.0",
   "description": "Syntax Highlighting For Haskell Lurk QuasiQuotes",
   "categories": [
@@ -14,7 +14,7 @@
     "templates"
   ],
   "license": "MIT",
-  "publisher": "ruzaani",
+  "publisher": "fernandoromay",
   "engines": {
     "vscode": "^1.66.0"
   },
