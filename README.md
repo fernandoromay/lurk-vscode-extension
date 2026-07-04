@@ -1,6 +1,6 @@
 # Lurk QQ
 
-Syntax highlighting for [Lurk](https://hackage.haskell.org/package/lurk) quasi-quoters in Haskell files.
+Syntax highlighting for [Lurk](https://github.com/fernandoromay/lurk) quasi-quoters in Haskell files.
 
 ![Lurk QQ example](assets/snippet.png)
 
