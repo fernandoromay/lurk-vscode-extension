@@ -15,10 +15,38 @@
   ],
   "license": "MIT",
   "publisher": "fernandoromay",
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:haskell"
+  ],
   "engines": {
     "vscode": "^1.66.0"
   },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "build": "node esbuild.js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "@types/vscode": "^1.66.0",
+    "typescript": "^4.5.0",
+    "esbuild": "^0.14.0"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^8.0.0"
+  },
   "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Lurk",
+      "properties": {
+        "lurk.hlsPath": {
+          "type": "string",
+          "default": "",
+          "description": "Absolute path to the haskell-language-server-wrapper executable. If left empty, it will attempt to find it automatically."
+        }
+      }
+    },
     "grammars": [
       {
         "injectTo": [
