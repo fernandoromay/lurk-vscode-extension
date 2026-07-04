@@ -102,11 +102,11 @@ function getCursorContext(uri, line, char) {
     }
 
     const interpText = text.slice(lastBraceOpen + 2);
-    const partialMatch = interpText.match(/(\S+)$/);
+    const partialMatch = interpText.match(/([^\s.]+)$/);
     if (!partialMatch) {
         const fullLine = lines[line];
         const afterCursor = fullLine.slice(char);
-        const spaceWordMatch = afterCursor.match(/^\s*(\S+)/);
+        const spaceWordMatch = afterCursor.match(/^\s*([^\s.]+)/);
         if (!spaceWordMatch) return { inLurkBlock: true, deadZone: false, expression: null };
         const expr = spaceWordMatch[1].split('}}')[0];
         return { inLurkBlock: true, deadZone: false, expression: expr };
@@ -114,7 +114,7 @@ function getCursorContext(uri, line, char) {
 
     const fullLine = lines[line];
     const afterPartial = fullLine.slice(char);
-    const fullWordMatch = (partialMatch[1] + afterPartial).match(/^(\S+)/);
+    const fullWordMatch = (partialMatch[1] + afterPartial).match(/^([^\s.]+)/);
     const expr = fullWordMatch ? fullWordMatch[1].split('}}')[0] : null;
 
     return { inLurkBlock: true, deadZone: false, expression: expr };
