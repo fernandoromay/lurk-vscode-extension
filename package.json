@@ -109,7 +109,7 @@
       }
     ]
   },
-  "icon": "./extras/lurk-logo.png",
+  "icon": "./assets/lurk-logo.png",
   "galleryBanner": {
     "color": "#1d8fff",
     "theme": "light"
