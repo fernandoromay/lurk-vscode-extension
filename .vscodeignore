@@ -1,5 +1,6 @@
 .vscode/**
 .git/**
+docs/**
 .gitignore
 .vscodeignore
 esbuild.js
@@ -8,4 +9,3 @@ node_modules/**
 **/*.ts
 **/tsconfig.json
 **/tsconfig.test.json
-!file.ts
